@@ -116,8 +116,7 @@ public class Case {
     //in the "neighbour cases" to choose the best one
     public Case next_best(Case previous){
 
-	double alpha = 1.0;
-	double total = total_next(alpha);
+	double total = total_next(board.alpha);
 	if(total == 0)
 	    return next_random(previous);
 	double [] p = new double[8];
@@ -129,7 +128,7 @@ public class Case {
 	    }else{
 		if(this.around[i] == this.board.cases[this.board.xStop][this.board.yStop])
 		    return this.around[i];
-		p[i] = Math.pow(this.around[i].pheromones,alpha)/total;
+		p[i] = Math.pow(this.around[i].pheromones,board.alpha)/total;
 	    }
 	}
 

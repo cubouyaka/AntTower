@@ -8,6 +8,9 @@ public class Board {
     int xStop, yStop;
     int nb_ants;
 
+    double coeff_evaporation;
+    double alpha;
+
     View view;
     boolean useGui = true;
 
@@ -15,6 +18,9 @@ public class Board {
 	int i, j;
 	n = _n;
 	m = _m;
+
+	coeff_evaporation = 0.96;
+	alpha = 1.0;
 
 	view = _view;
 
@@ -63,8 +69,6 @@ public class Board {
     }
 
     public void stepBoard() {
-
-	double coeff_evaporation = 0.96;
 
 	for (int i = 0; i < n; i++)
 	    for (int j = 0; j < m; j++)

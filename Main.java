@@ -20,6 +20,9 @@ public class Main {
 		int n = view.obtainN();
 		int m = view.obtainM();
 
+		double coeff_evaporation = view.obtainEC();
+		double alpha = view.obtainAlpha();
+
 		view.buildGrid();
 		view.display();
 
@@ -44,7 +47,8 @@ public class Main {
 		}
 
 		Board board = new Board(n, m, xStart, yStart, xStop, yStop, view);
-
+		board.coeff_evaporation = coeff_evaporation;
+		board.alpha = alpha;
 
 		//Board board = askInfo();
 		//	board.cases[board.xStart][board.yStart].addAnt(new Ant(true,true,board)); //the first ant

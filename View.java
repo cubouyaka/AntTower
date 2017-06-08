@@ -81,6 +81,18 @@ public class View extends JFrame {
         return mSize;
     }
 
+    public double obtainEC() {
+        String input = JOptionPane.showInputDialog(mainPanel, "Please provide the value for the Evaporation Coefficient:");
+        double EC = Double.parseDouble(input);
+        return EC;
+    }
+
+    public double obtainAlpha() {
+        String input = JOptionPane.showInputDialog(mainPanel, "Please provide the value for Alpha:");
+        double Alpha = Double.parseDouble(input);
+        return Alpha;
+    }
+
 
     public void buildGrid() {
 
